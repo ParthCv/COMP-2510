@@ -3,17 +3,22 @@
 
 void printMultiplicationTable(){
     printf("Multiplication for numbers upto 10\n");
-    printf("-------------------------------------------------------------\n");
-    for(int i = 1; i <= 10; i++) {
-        printf("Table of %d\n", i);
-        for(int j = 1; j <= 10; j++) {
-            printf("\t%d x %d = %d\n", i, j, j*i);
+    printf("------------------------------------------------\n\t*\t");
+    for (int i = 1; i <= 10; i++) {
+        printf("%3d\t",i);
+    }
+    printf("\n");
+    printf("------------------------------------------------\n");
+    for (int i = 1; i <= 10; i++) {
+        printf("%3d | ", i);
+        for (int j = 1; j <= 10; j++) {
+            printf("%3d\t", i*j);
         }
-        printf("----------------------\n");
+        printf("\n");
     }
 }
 
-bool isPalindrome(int elements[], int size) {
+bool isPalindrome(const int elements[], int size) {
     for(int i = 0; i < size/2 && size != 0; i++) {
         if(elements[i] != elements[size-i-1]) {
             return false;
@@ -23,40 +28,65 @@ bool isPalindrome(int elements[], int size) {
 }
 
 int main() {
-    printf("Hello, World!\n");
     printMultiplicationTable();
 
-    int arr1[] = {1,2,3,4};
-    int arr2[] = {1,2,3,2,1};
-    int arr3[] = {1,2,3,4,5,6,7,8,9,0,0,9,8,7,6,5,4,3,2,1};
-    int arr4[] = {1};
-    int arr1Size = 4;
-    int arr2Size = 5;
-    int arr3Size = 20;
-    int arr4Size = 1;
+    printf("\n");
 
-    if(isPalindrome(arr1,arr1Size)) {
-        printf("Array 1 is a palindrome\n");
-    } else {
-        printf("Array 1 is not a palindrome\n");
+    //Test Cases for Palindrome function
+
+    /* Empty array
+     * expected result - true
+     */
+
+    int array1[] = {};
+    int array1Size = 0;
+
+    if (isPalindrome(array1,array1Size) == true) {
+        printf("{} is a palindrome\n");
     }
 
-    if(isPalindrome(arr2,arr2Size)) {
-        printf("Array 2 is a palindrome\n");
-    } else {
-        printf("Array 2 is not a palindrome\n");
+    /* Array with 1 integer
+     * expected result  - true
+     */
+
+    int array2[] = {1};
+    int array2Size = 1;
+
+    if (isPalindrome(array2,array2Size) == true) {
+        printf("{1} is a palindrome\n");
     }
 
-    if(isPalindrome(arr3,arr3Size)) {
-        printf("Array 3 is a palindrome\n");
-    } else {
-        printf("Array 3 is not a palindrome\n");
+    /* Non Palindrome array
+     * expected result - false
+     */
+
+    int array3[] = {1,2,3,4};
+    int array3Size = 4;
+
+    if (isPalindrome(array3,array3Size) == false) {
+        printf("{1,2,3,4} is not a palindrome\n");
     }
 
-    if(isPalindrome(arr4,arr4Size)) {
-        printf("Array 4 is a palindrome\n");
-    } else {
-        printf("Array 4 is not a palindrome\n");
+    /* A Palindrome array
+     * expected result - true
+     */
+
+    int array4[] = {1,2,3,3,2,1};
+    int array4Size = 6;
+
+    if (isPalindrome(array4,array4Size) == true) {
+        printf("{1,2,3,3,2,1} is a palindrome\n");
+    }
+
+    /* A Palindrome array with an odd number size
+     * expected result - true
+     */
+
+    int array5[] = {5,4,9,8,9,4,5};
+    int array5Size = 7;
+
+    if (isPalindrome(array5,array5Size) == true) {
+        printf("{5,4,9,8,9,4,5} is a palindrome\n");
     }
 
     return 0;
