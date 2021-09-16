@@ -74,7 +74,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/d/COMP-2510/Labs/Lab2/main.c">
+		<Unit filename="/cygdrive/d/COMP-2510/Labs/Lab2/A01256537.c">
 			<Option target="Lab2"/>
 		</Unit>
 		<Unit filename="/cygdrive/d/COMP-2510/Labs/Lab2/CMakeLists.txt">
