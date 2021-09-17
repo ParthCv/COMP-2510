@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+/*
+ * @Author - Parth Chaturvedi
+ * @Version - 16-09-2021
+ * */
+
+/*
+ * printMultiplicationTable() - Prints a multiplication table from 1 to 10.
+ * */
+
 void printMultiplicationTable(){
     printf("Multiplication for numbers upto 10\n");
     printf("------------------------------------------------\n\t*\t");
@@ -17,6 +26,13 @@ void printMultiplicationTable(){
         printf("\n");
     }
 }
+
+/*
+ * isPalindrome - Checks if the array is a palindrome or not.
+ * @params elements[] - an array of ints
+ * @params size - size of the array
+ * @return true if array is a palindrome
+ * */
 
 bool isPalindrome(const int elements[], int size) {
     for(int i = 0; i < size/2 && size != 0; i++) {
