@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void swap(int *firstPointer, int *secondPointer) {
   int temporary = *firstPointer;
@@ -42,6 +43,16 @@ int main() {
     printf("%d\n",one);
     incrementByOne(&one);
     printf("%d\n",one);
+
+    char firstString[10] = "good";
+    char *secondString = "book";
+    char thirdString[10];
+    strncpy(thirdString, secondString, 3);
+    thirdString[3] = 0;
+    puts(thirdString);
+    puts(strncat(firstString, secondString, 2));
+
+
 
     return 0;
 }
