@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Wl,--enable-auto-import CMakeFiles/quiz1.dir/A01256537.c.o -o quiz1.exe -Wl,--out-implib,libquiz1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

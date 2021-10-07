@@ -66,27 +66,27 @@ include CMakeFiles/Lab4.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab4.dir/flags.make
 
-CMakeFiles/Lab4.dir/main.c.o: CMakeFiles/Lab4.dir/flags.make
-CMakeFiles/Lab4.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/COMP-2510/Labs/Lab4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab4.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lab4.dir/main.c.o -c /cygdrive/d/COMP-2510/Labs/Lab4/main.c
+CMakeFiles/Lab4.dir/A01256537.c.o: CMakeFiles/Lab4.dir/flags.make
+CMakeFiles/Lab4.dir/A01256537.c.o: ../A01256537.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/COMP-2510/Labs/Lab4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab4.dir/A01256537.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Lab4.dir/A01256537.c.o -c /cygdrive/d/COMP-2510/Labs/Lab4/A01256537.c
 
-CMakeFiles/Lab4.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lab4.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/d/COMP-2510/Labs/Lab4/main.c > CMakeFiles/Lab4.dir/main.c.i
+CMakeFiles/Lab4.dir/A01256537.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lab4.dir/A01256537.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/d/COMP-2510/Labs/Lab4/A01256537.c > CMakeFiles/Lab4.dir/A01256537.c.i
 
-CMakeFiles/Lab4.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lab4.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/d/COMP-2510/Labs/Lab4/main.c -o CMakeFiles/Lab4.dir/main.c.s
+CMakeFiles/Lab4.dir/A01256537.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lab4.dir/A01256537.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/d/COMP-2510/Labs/Lab4/A01256537.c -o CMakeFiles/Lab4.dir/A01256537.c.s
 
 # Object files for target Lab4
 Lab4_OBJECTS = \
-"CMakeFiles/Lab4.dir/main.c.o"
+"CMakeFiles/Lab4.dir/A01256537.c.o"
 
 # External object files for target Lab4
 Lab4_EXTERNAL_OBJECTS =
 
-Lab4.exe: CMakeFiles/Lab4.dir/main.c.o
+Lab4.exe: CMakeFiles/Lab4.dir/A01256537.c.o
 Lab4.exe: CMakeFiles/Lab4.dir/build.make
 Lab4.exe: CMakeFiles/Lab4.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/d/COMP-2510/Labs/Lab4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Lab4.exe"
