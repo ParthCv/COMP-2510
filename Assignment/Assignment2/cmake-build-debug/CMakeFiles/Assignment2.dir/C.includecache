@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/COMP-2510/Labs/Lab5/A01256537.c
+/cygdrive/d/COMP-2510/Assignment/Assignment2/main.c
 stdio.h
 -
 string.h
