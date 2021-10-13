@@ -15,7 +15,6 @@
 int wordSearch(char * string, char * word) {
     char * tempString = string;
     char * tempWord = word;
-    int flag = 0;
 
     for(int i = 0; i < strlen(string); i++) {
         if(*tempString == *tempWord) {
@@ -33,14 +32,11 @@ int wordSearch(char * string, char * word) {
             tempWord = word;
             if(wordIndex == strlen(word)) {
                 return i;
-                flag = 1;
             }
         }
         tempString++;
     }
-    if(flag == 0) {
-        return -1;
-    }
+    return -1;
 }
 
 /**
@@ -57,12 +53,11 @@ void processFile(char * fileName, char * word) {
     }
 
     char line[MAX_CHARACTER];
-    int index = 0;
     int lineNumber = 1;
     int flag = 0;
 
     while (fgets(line, MAX_CHARACTER, file) != NULL && flag == 0) {
-        index = wordSearch(line, word);
+        int index = wordSearch(line, word);
         if(index != -1) {
             printf("Line: %d, character: %d\n", lineNumber, index+1);
             flag = 1;

@@ -65,27 +65,27 @@ include CMakeFiles/Assignment2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Assignment2.dir/flags.make
 
-CMakeFiles/Assignment2.dir/main.c.obj: CMakeFiles/Assignment2.dir/flags.make
-CMakeFiles/Assignment2.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\COMP-2510\Assignment\Assignment2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Assignment2.dir/main.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Assignment2.dir\main.c.obj -c D:\COMP-2510\Assignment\Assignment2\main.c
+CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.obj: CMakeFiles/Assignment2.dir/flags.make
+CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.obj: ../A01256537-Assignment-2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\COMP-2510\Assignment\Assignment2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Assignment2.dir\A01256537-Assignment-2.c.obj -c D:\COMP-2510\Assignment\Assignment2\A01256537-Assignment-2.c
 
-CMakeFiles/Assignment2.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment2.dir/main.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\COMP-2510\Assignment\Assignment2\main.c > CMakeFiles\Assignment2.dir\main.c.i
+CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\COMP-2510\Assignment\Assignment2\A01256537-Assignment-2.c > CMakeFiles\Assignment2.dir\A01256537-Assignment-2.c.i
 
-CMakeFiles/Assignment2.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment2.dir/main.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\COMP-2510\Assignment\Assignment2\main.c -o CMakeFiles\Assignment2.dir\main.c.s
+CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\COMP-2510\Assignment\Assignment2\A01256537-Assignment-2.c -o CMakeFiles\Assignment2.dir\A01256537-Assignment-2.c.s
 
 # Object files for target Assignment2
 Assignment2_OBJECTS = \
-"CMakeFiles/Assignment2.dir/main.c.obj"
+"CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.obj"
 
 # External object files for target Assignment2
 Assignment2_EXTERNAL_OBJECTS =
 
-Assignment2.exe: CMakeFiles/Assignment2.dir/main.c.obj
+Assignment2.exe: CMakeFiles/Assignment2.dir/A01256537-Assignment-2.c.obj
 Assignment2.exe: CMakeFiles/Assignment2.dir/build.make
 Assignment2.exe: CMakeFiles/Assignment2.dir/linklibs.rsp
 Assignment2.exe: CMakeFiles/Assignment2.dir/objects1.rsp
