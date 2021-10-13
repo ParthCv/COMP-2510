@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "Assignment2.exe"
+  "Assignment2.exe.manifest"
   "Assignment2.pdb"
-  "CMakeFiles/Assignment2.dir/main.c.o"
+  "CMakeFiles/Assignment2.dir/main.c.obj"
   "libAssignment2.dll.a"
 )
 

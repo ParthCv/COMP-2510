@@ -1,0 +1,3 @@
+/cygdrive/d/COMP-2510/Practice/wordSearch/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/COMP-2510/Practice/wordSearch/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/d/COMP-2510/Practice/wordSearch/cmake-build-debug/CMakeFiles/wordSearch.dir

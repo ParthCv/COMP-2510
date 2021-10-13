@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/COMP-2510/Assignment/Assignment2/main.c
+D:/COMP-2510/Assignment/Assignment2/main.c
 stdio.h
 -
 string.h
+-
+stdbool.h
 -
 
