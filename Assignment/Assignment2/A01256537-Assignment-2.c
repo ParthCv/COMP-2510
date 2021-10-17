@@ -20,13 +20,13 @@ int wordSearch(char * string, char * word) {
         if(*tempString == *tempWord) {
             char * tempPointer = tempString;
             int wordIndex;
-            bool charFound = true;
-            for(wordIndex = 0; wordIndex < strlen(word) && charFound; wordIndex++) {
+            bool wordFound = true;
+            for(wordIndex = 0; wordIndex < strlen(word) && wordFound; wordIndex++) {
                 if(*tempPointer == *tempWord) {
                     tempWord++;
                     tempPointer++;
                 } else {
-                    charFound = false;
+                    wordFound = false;
                 }
             }
             tempWord = word;

@@ -17,7 +17,9 @@ void copyFile(char * file, char * newFile) {
     copyFile = fopen(newFile, "w");
     if(existingFile == NULL || copyFile == NULL) printf("Could not open file");
     while (fgets(line, MAX_CHAR, existingFile) != NULL) fputs(line, copyFile);
-    printf("file copeid to -> %s", newFile);
+    printf("file coped to -> %s", newFile);
+    fclose(existingFile);
+    fclose(copyFile);
 }
 
 int main(int argc, char * argv[]) {
