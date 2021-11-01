@@ -1,0 +1,5 @@
+Jack 90
+Jae 78
+Mary 85
+Joe 92
+Kim 82
