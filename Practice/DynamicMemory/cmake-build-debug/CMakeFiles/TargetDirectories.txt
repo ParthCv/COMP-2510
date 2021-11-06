@@ -1,0 +1,3 @@
+D:/COMP-2510/Practice/DynamicMemory/cmake-build-debug/CMakeFiles/DynamicMemory.dir
+D:/COMP-2510/Practice/DynamicMemory/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/COMP-2510/Practice/DynamicMemory/cmake-build-debug/CMakeFiles/rebuild_cache.dir
