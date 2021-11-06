@@ -14,7 +14,7 @@ int turnOnSecondAndThirdBit(int n){
 }
 
 int turnOffFourthBit(int n){
-    int mask = 23;
+    int mask = ~(0x1011);
     return n & mask;
 }
 
