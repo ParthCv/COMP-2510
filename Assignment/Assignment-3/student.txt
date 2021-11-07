@@ -1,0 +1,11 @@
+Mary 4.0
+Jack 2.45
+John 3.9
+Jane 3.8
+Mike 3.125
+Ram 3.56
+Sam 3.7
+Gary 2.9
+Matt 3.93
+Becky 3.97
+Karen 2.78
