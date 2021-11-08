@@ -5,11 +5,11 @@
 #define WRONG_NUMBER_OF_ARGUMENTS_ERROR 1
 #define FILE_NOT_FOUND_ERROR 2
 #define MEMORY_NOT_ALLOCATED_ERROR 3
-#define INITIAL_SIZE 1000
+#define INITIAL_SIZE 10
 
 /**
  * The structure to hold student data.
- * name - String to store student name.
+ * name - String to store student's name.
  * gpa - float to store student's GPA.
  */
 
@@ -19,7 +19,7 @@ struct Student {
 };
 
 /**
- * Resizes a dynamically allocated if length is bigger than the initial size.
+ * Resizes a dynamically allocated array if length is bigger than the initial size.
  *
  * @param students - array of Students
  * @param usedLength - used length of the allocated memory
@@ -28,12 +28,12 @@ struct Student {
  */
 
 struct Student *resizeArrayIfNeeded(struct Student *students, int usedLength, int *arraySize) {
-    if(usedLength <= *arraySize) {
+    if (usedLength <= *arraySize) {
         return students;
     }
     *arraySize *= 2;
-    struct Student *resizedStudents = (struct Student *) realloc(students,*arraySize * sizeof(struct Student));
-    if(resizedStudents == NULL){
+    struct Student *resizedStudents = (struct Student *) realloc(students, *arraySize * sizeof(struct Student));
+    if (resizedStudents == NULL) {
         perror("Error reallocating memory!");
         exit(MEMORY_NOT_ALLOCATED_ERROR);
     }
@@ -49,8 +49,8 @@ struct Student *resizeArrayIfNeeded(struct Student *students, int usedLength, in
 
 struct Student *readAndStoreFileData(FILE *file) {
     int size = INITIAL_SIZE;
-    struct Student *students = (struct Student *)calloc(size,size * sizeof(struct Student));
-    if(students == NULL) {
+    struct Student *students = (struct Student *) calloc(size, size * sizeof(struct Student));
+    if (students == NULL) {
         perror("Error allocating memory!");
         exit(MEMORY_NOT_ALLOCATED_ERROR);
     }
@@ -58,25 +58,28 @@ struct Student *readAndStoreFileData(FILE *file) {
     while (!feof(file)) {
         numberOfStudents++;
         students = resizeArrayIfNeeded(students, numberOfStudents, &size);
-        fscanf(file, "%s", &students[numberOfStudents-1].name);
-        fscanf(file, "%f", &students[numberOfStudents-1].gpa);
+        fscanf(file, "%s", &students[numberOfStudents - 1].name);
+        fscanf(file, "%f", &students[numberOfStudents - 1].gpa);
     }
     return students;
 }
 
 /**
+ * Sorts the array using the bubble sort method.
  *
+ * @param students array with all the students
+ * @param size the number of students in the stu
  */
 
-struct Student *sortTheArray(struct Student *students, int size){
+struct Student *sortTheArray(struct Student *students, int size) {
     struct Student *tempStudents = students;
-    for(int i = 0; i < size-1; i++){
-        for(int j = 0; j < size-i-1; j++){
-           if(tempStudents[i].gpa > tempStudents[i+1].gpa){
-               struct Student temp = tempStudents[j];
-               tempStudents[j] = tempStudents[j + 1];
-               tempStudents[j + 1] = temp;
-           }
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (tempStudents[j].gpa > tempStudents[j + 1].gpa) {
+                struct Student temp = tempStudents[j];
+                tempStudents[j] = tempStudents[j + 1];
+                tempStudents[j + 1] = temp;
+            }
         }
     }
     return tempStudents;
@@ -89,9 +92,9 @@ struct Student *sortTheArray(struct Student *students, int size){
  * @return the number of students
  */
 
-int arraySize(struct Student *students){
+int arraySize(struct Student *students) {
     int numOfStudents = 0;
-    while((strcmp(students[numOfStudents].name," ") != 0) && students[numOfStudents].gpa != 0) numOfStudents++;
+    while ((strcmp(students[numOfStudents].name, " ") != 0) && students[numOfStudents].gpa != 0) numOfStudents++;
     return numOfStudents;
 }
 
@@ -103,22 +106,22 @@ int arraySize(struct Student *students){
 
 void printStudentData(struct Student *students) {
     int index = 0;
-    while((strcmp(students[index].name," ") != 0) && students[index].gpa != 0) {
-        //if (students[index].gpa > 3.9)
+    while ((strcmp(students[index].name, " ") != 0) && students[index].gpa != 0) {
+        if (students[index].gpa > 3.9f)
             printf("%s %0.2f\n", students[index].name, students[index].gpa);
         index++;
     }
 }
 
 /**
- * Opens the file and process it's data.
+ * Opens the file and processes it's data.
  *
  * @param filename name of the file to process
  */
 
 void processFile(const char *filename) {
-    FILE *file = fopen(filename,"r");
-    if(file == NULL) {
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
         perror("File could not be opened!");
         exit(FILE_NOT_FOUND_ERROR);
     }
@@ -129,8 +132,8 @@ void processFile(const char *filename) {
     fclose(file);
 }
 
-int main(int argc, char *argv[]){
-    if(argc != 2){
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
         perror("Wrong number of arguments!");
         exit(WRONG_NUMBER_OF_ARGUMENTS_ERROR);
     }
