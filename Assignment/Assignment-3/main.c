@@ -19,6 +19,19 @@ struct Student {
 };
 
 /**
+ * Checks if memory allocation was successful or not.
+ *
+ * @param students dynamically allocated Student array
+ */
+
+void checkMemoryAllocation(struct Student *students) {
+    if (students == NULL) {
+        perror("Error reallocating memory!");
+        exit(MEMORY_NOT_ALLOCATED_ERROR);
+    }
+}
+
+/**
  * Resizes a dynamically allocated array if length is bigger than the initial size.
  *
  * @param students - array of Students
@@ -33,10 +46,7 @@ struct Student *resizeArrayIfNeeded(struct Student *students, int usedLength, in
     }
     *arraySize *= 2;
     struct Student *resizedStudents = (struct Student *) realloc(students, *arraySize * sizeof(struct Student));
-    if (resizedStudents == NULL) {
-        perror("Error reallocating memory!");
-        exit(MEMORY_NOT_ALLOCATED_ERROR);
-    }
+    checkMemoryAllocation(resizedStudents);
     return resizedStudents;
 }
 
@@ -50,10 +60,7 @@ struct Student *resizeArrayIfNeeded(struct Student *students, int usedLength, in
 struct Student *readAndStoreFileData(FILE *file) {
     int size = INITIAL_SIZE;
     struct Student *students = (struct Student *) calloc(size, size * sizeof(struct Student));
-    if (students == NULL) {
-        perror("Error allocating memory!");
-        exit(MEMORY_NOT_ALLOCATED_ERROR);
-    }
+    checkMemoryAllocation(students);
     int numberOfStudents = 0;
     while (!feof(file)) {
         numberOfStudents++;
@@ -114,6 +121,19 @@ void printStudentData(struct Student *students) {
 }
 
 /**
+ * Checks if file was successfully found.
+ *
+ * @param file pointer to the file.
+ */
+
+void checkFile(FILE *file){
+    if (file == NULL) {
+        perror("File could not be opened!");
+        exit(FILE_NOT_FOUND_ERROR);
+    }
+}
+
+/**
  * Opens the file and processes it's data.
  *
  * @param filename name of the file to process
@@ -121,10 +141,7 @@ void printStudentData(struct Student *students) {
 
 void processFile(const char *filename) {
     FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        perror("File could not be opened!");
-        exit(FILE_NOT_FOUND_ERROR);
-    }
+    checkFile(file);
     struct Student *students = readAndStoreFileData(file);
     students = sortTheArray(students, arraySize(students));
     printStudentData(students);
@@ -132,11 +149,21 @@ void processFile(const char *filename) {
     fclose(file);
 }
 
-int main(int argc, char *argv[]) {
+/**
+ * Checks if correct number of command line arguments were provided.
+ *
+ * @param argc count of command line arguments
+ */
+
+void correctNumberOfArguments(int argc){
     if (argc != 2) {
         perror("Wrong number of arguments!");
         exit(WRONG_NUMBER_OF_ARGUMENTS_ERROR);
     }
+}
+
+int main(int argc, char *argv[]) {
+    correctNumberOfArguments(argc);
     processFile(argv[1]);
     return 0;
 }
