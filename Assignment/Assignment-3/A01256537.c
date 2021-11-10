@@ -6,6 +6,7 @@
 #define FILE_NOT_FOUND_ERROR 2
 #define MEMORY_NOT_ALLOCATED_ERROR 3
 #define INITIAL_SIZE 10
+#define GPA_THRESHOLD 3.9f
 
 /**
  * The structure to hold student data.
@@ -37,7 +38,7 @@ void checkMemoryAllocation(struct Student *students) {
  * @param students - array of Students
  * @param usedLength - used length of the allocated memory
  * @param arraySize - current allocated size of the array
- * @return reallocated array with bigger size
+ * @return reallocated array with twice the size
  */
 
 struct Student *resizeArrayIfNeeded(struct Student *students, int usedLength, int *arraySize) {
@@ -65,8 +66,7 @@ struct Student *readAndStoreFileData(FILE *file) {
     while (!feof(file)) {
         numberOfStudents++;
         students = resizeArrayIfNeeded(students, numberOfStudents, &size);
-        fscanf(file, "%s", &students[numberOfStudents - 1].name);
-        fscanf(file, "%f", &students[numberOfStudents - 1].gpa);
+        fscanf(file, "%s %f", &students[numberOfStudents - 1].name, &students[numberOfStudents - 1].gpa);
     }
     return students;
 }
@@ -114,8 +114,8 @@ int arraySize(struct Student *students) {
 void printStudentData(struct Student *students) {
     int index = 0;
     while ((strcmp(students[index].name, " ") != 0) && students[index].gpa != 0) {
-        if (students[index].gpa > 3.9f)
-            printf("%s %0.2f\n", students[index].name, students[index].gpa);
+        if (students[index].gpa > GPA_THRESHOLD)
+            printf("%s %0.6f\n", students[index].name, students[index].gpa);
         index++;
     }
 }

@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "Assignment_3.exe"
   "Assignment_3.exe.manifest"
   "Assignment_3.pdb"
-  "CMakeFiles/Assignment_3.dir/main.c.obj"
+  "CMakeFiles/Assignment_3.dir/A01256537.c.obj"
   "libAssignment_3.dll.a"
 )
 

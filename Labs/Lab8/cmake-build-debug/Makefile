@@ -56,23 +56,13 @@ RM = "D:\Apps\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\COMP-2510\Assignment\Assignment-3
+CMAKE_SOURCE_DIR = D:\COMP-2510\Labs\Lab8
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\COMP-2510\Assignment\Assignment-3\cmake-build-debug
+CMAKE_BINARY_DIR = D:\COMP-2510\Labs\Lab8\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\Apps\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -84,11 +74,21 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"D:\Apps\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\COMP-2510\Assignment\Assignment-3\cmake-build-debug\CMakeFiles D:\COMP-2510\Assignment\Assignment-3\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\COMP-2510\Labs\Lab8\cmake-build-debug\CMakeFiles D:\COMP-2510\Labs\Lab8\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\COMP-2510\Assignment\Assignment-3\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\COMP-2510\Labs\Lab8\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Assignment_3
+# Target rules for targets named Lab10
 
 # Build rule for target.
-Assignment_3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Assignment_3
-.PHONY : Assignment_3
+Lab10: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Lab10
+.PHONY : Lab10
 
 # fast build rule for target.
-Assignment_3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Assignment_3.dir\build.make CMakeFiles/Assignment_3.dir/build
-.PHONY : Assignment_3/fast
+Lab10/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/build
+.PHONY : Lab10/fast
 
-A01256537.obj: A01256537.c.obj
-.PHONY : A01256537.obj
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-A01256537.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Assignment_3.dir\build.make CMakeFiles/Assignment_3.dir/A01256537.c.obj
-.PHONY : A01256537.c.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/main.c.obj
+.PHONY : main.c.obj
 
-A01256537.i: A01256537.c.i
-.PHONY : A01256537.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-A01256537.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Assignment_3.dir\build.make CMakeFiles/Assignment_3.dir/A01256537.c.i
-.PHONY : A01256537.c.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/main.c.i
+.PHONY : main.c.i
 
-A01256537.s: A01256537.c.s
-.PHONY : A01256537.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-A01256537.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Assignment_3.dir\build.make CMakeFiles/Assignment_3.dir/A01256537.c.s
-.PHONY : A01256537.c.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Assignment_3
-	@echo ... A01256537.obj
-	@echo ... A01256537.i
-	@echo ... A01256537.s
+	@echo ... Lab10
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
