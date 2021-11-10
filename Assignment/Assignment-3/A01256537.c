@@ -6,6 +6,7 @@
 #define FILE_NOT_FOUND_ERROR 2
 #define MEMORY_NOT_ALLOCATED_ERROR 3
 #define INITIAL_SIZE 10
+#define MAX_LENGTH 50
 #define GPA_THRESHOLD 3.9f
 
 /**
@@ -15,7 +16,7 @@
  */
 
 struct Student {
-    char name[50];
+    char *name;
     float gpa;
 };
 
@@ -63,10 +64,15 @@ struct Student *readAndStoreFileData(FILE *file) {
     struct Student *students = (struct Student *) calloc(size, size * sizeof(struct Student));
     checkMemoryAllocation(students);
     int numberOfStudents = 0;
-    while (!feof(file)) {
+    float tempGpa = 0;
+    char tempName[MAX_LENGTH] = {0};
+    struct Student tempStudent;
+    while (fscanf(file,"%s %f",tempName,&tempGpa) == 2) {
         numberOfStudents++;
         students = resizeArrayIfNeeded(students, numberOfStudents, &size);
-        fscanf(file, "%s %f", &students[numberOfStudents - 1].name, &students[numberOfStudents - 1].gpa);
+        tempStudent.gpa = tempGpa;
+        tempStudent.name = strdup(tempName);
+        students[numberOfStudents-1] = tempStudent;
     }
     return students;
 }
@@ -101,7 +107,7 @@ struct Student *sortTheArray(struct Student *students, int size) {
 
 int arraySize(struct Student *students) {
     int numOfStudents = 0;
-    while ((strcmp(students[numOfStudents].name, " ") != 0) && students[numOfStudents].gpa != 0) numOfStudents++;
+    while (students[numOfStudents].gpa != 0 && students[numOfStudents].name != NULL) numOfStudents++;
     return numOfStudents;
 }
 
@@ -113,7 +119,7 @@ int arraySize(struct Student *students) {
 
 void printStudentData(struct Student *students) {
     int index = 0;
-    while ((strcmp(students[index].name, " ") != 0) && students[index].gpa != 0) {
+    while (students[index].gpa != 0 && students[index].name != NULL) {
         if (students[index].gpa > GPA_THRESHOLD)
             printf("%s %0.6f\n", students[index].name, students[index].gpa);
         index++;

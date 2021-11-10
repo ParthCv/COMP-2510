@@ -57,7 +57,10 @@ void processString(char *input) {
 }
 
 int main(int argc, char *argv[]) {
-    correctNumberOfArguments(argc);
+    //correctNumberOfArguments(argc);
+    printf("%s\n",argv[0]);
+    printf("%s\n",argv[2]);
+
     processString(argv[1]);
     return 0;
 }
