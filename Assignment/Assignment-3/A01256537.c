@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define CORRECT_NUMBER_OF_ARGUMENTS 2
 #define WRONG_NUMBER_OF_ARGUMENTS_ERROR 1
 #define FILE_NOT_FOUND_ERROR 2
 #define MEMORY_NOT_ALLOCATED_ERROR 3
@@ -121,7 +122,7 @@ void printStudentData(struct Student *students) {
     int index = 0;
     while (students[index].gpa != 0 && students[index].name != NULL) {
         if (students[index].gpa > GPA_THRESHOLD)
-            printf("%s %0.6f\n", students[index].name, students[index].gpa);
+            printf("%s %lf\n", students[index].name, students[index].gpa);
         index++;
     }
 }
@@ -132,11 +133,13 @@ void printStudentData(struct Student *students) {
  * @param file pointer to the file.
  */
 
-void checkFile(FILE *file){
+FILE *openFile(char *filename){
+    FILE *file = fopen(filename, "r");
     if (file == NULL) {
         perror("File could not be opened!");
         exit(FILE_NOT_FOUND_ERROR);
     }
+    return file;
 }
 
 /**
@@ -145,9 +148,8 @@ void checkFile(FILE *file){
  * @param filename name of the file to process
  */
 
-void processFile(const char *filename) {
-    FILE *file = fopen(filename, "r");
-    checkFile(file);
+void processFile(char *filename) {
+    FILE *file = openFile(filename);
     struct Student *students = readAndStoreFileData(file);
     students = sortTheArray(students, arraySize(students));
     printStudentData(students);
@@ -162,7 +164,7 @@ void processFile(const char *filename) {
  */
 
 void correctNumberOfArguments(int argc){
-    if (argc != 2) {
+    if (argc != CORRECT_NUMBER_OF_ARGUMENTS) {
         perror("Wrong number of arguments!");
         exit(WRONG_NUMBER_OF_ARGUMENTS_ERROR);
     }
