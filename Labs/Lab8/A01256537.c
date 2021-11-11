@@ -7,6 +7,11 @@
 #define INVALID_NUMBER_OF_ARGUMENTS_ERROR 1
 #define MEMORY_ALLOCATION_ERROR 2
 
+/**
+ * Checks if correct number of arguments were passed.
+ *
+ * @param argc number of arguments
+ */
 
 void correctNumberOfArguments(int argc) {
     if (argc != EXPECTED_NUMBER_OF_ARGUMENTS) {
@@ -14,6 +19,13 @@ void correctNumberOfArguments(int argc) {
         exit(INVALID_NUMBER_OF_ARGUMENTS_ERROR);
     }
 }
+
+/**
+ * converts the input string to specified format.
+ *
+ * @param input the string needed to be converted
+ * @param output the converted string
+ */
 
 void convertString(char *input, char *output) {
     if (!*input) {
@@ -37,6 +49,12 @@ void convertString(char *input, char *output) {
     }
 }
 
+/**
+ * Calculates the size of output string based on the input string
+ *
+ * @param input the string passed in argument
+ */
+
 size_t getOutputSize(char *input) {
     size_t expectedSize = strlen(input) + 1;
     while (*input) {
@@ -49,12 +67,24 @@ size_t getOutputSize(char *input) {
     return expectedSize;
 }
 
+/**
+ * checks if memory allocation was successful
+ *
+ * @param string the string that was allocated
+ */
+
 void checkMemoryAllocation(const char *string){
     if(string == NULL){
         perror("Memory Allocation Error");
         exit(MEMORY_ALLOCATION_ERROR);
     }
 }
+
+/**
+ * processes the input and computes the output and prints them
+ *
+ * @param input the string passed in argument
+ */
 
 void processString(char *input) {
     size_t size = getOutputSize(input);
