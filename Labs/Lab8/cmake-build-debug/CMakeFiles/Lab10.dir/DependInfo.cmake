@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/COMP-2510/Labs/Lab8/main.c" "D:/COMP-2510/Labs/Lab8/cmake-build-debug/CMakeFiles/Lab10.dir/main.c.obj"
+  "D:/COMP-2510/Labs/Lab8/A01256537.c" "D:/COMP-2510/Labs/Lab8/cmake-build-debug/CMakeFiles/Lab10.dir/A01256537.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

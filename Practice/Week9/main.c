@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define max(a,b) (((a) > (b)) ? (a) : (b))
+
 struct date{
     int day;
     int month;
@@ -35,8 +37,14 @@ void printDateDiff(struct date firstDate, struct date secondDate) {
 }
 
 int main() {
-    struct date date1 = {12,9,2003};
-    struct date date2 = {24,8,2001};
-    printDateDiff(date2,date1);
+//    struct date date1 = {12,9,2003};
+//    struct date date2 = {24,8,2001};
+//    printDateDiff(date2,date1);\
+
+    int x = 5;
+    int y = 10;
+    printf("max = %d\n",max(++x,--y));
+    printf("x = %d, y = %d",x,y);
+
     return 0;
 }
