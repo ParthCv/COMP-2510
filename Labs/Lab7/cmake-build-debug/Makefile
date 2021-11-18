@@ -128,29 +128,29 @@ Lab7/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/build
 .PHONY : Lab7/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+library.obj: library.c.obj
+.PHONY : library.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/main.c.obj
-.PHONY : main.c.obj
+library.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/library.c.obj
+.PHONY : library.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+library.i: library.c.i
+.PHONY : library.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/main.c.i
-.PHONY : main.c.i
+library.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/library.c.i
+.PHONY : library.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+library.s: library.c.s
+.PHONY : library.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/main.c.s
-.PHONY : main.c.s
+library.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab7.dir\build.make CMakeFiles/Lab7.dir/library.c.s
+.PHONY : library.c.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Lab7
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... library.obj
+	@echo ... library.i
+	@echo ... library.s
 .PHONY : help
 
 

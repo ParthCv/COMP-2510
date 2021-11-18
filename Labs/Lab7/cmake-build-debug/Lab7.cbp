@@ -18,10 +18,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Lab7">
-				<Option output="D:/COMP-2510/Labs/Lab7/cmake-build-debug/Lab7.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="D:/COMP-2510/Labs/Lab7/cmake-build-debug/libLab7.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/COMP-2510/Labs/Lab7/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
@@ -36,10 +36,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Lab7/fast">
-				<Option output="D:/COMP-2510/Labs/Lab7/cmake-build-debug/Lab7.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="D:/COMP-2510/Labs/Lab7/cmake-build-debug/libLab7.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/COMP-2510/Labs/Lab7/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
@@ -74,7 +74,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/COMP-2510/Labs/Lab7/main.c">
+		<Unit filename="D:/COMP-2510/Labs/Lab7/library.c">
+			<Option target="Lab7"/>
+		</Unit>
+		<Unit filename="D:/COMP-2510/Labs/Lab7/library.h">
 			<Option target="Lab7"/>
 		</Unit>
 		<Unit filename="D:/COMP-2510/Labs/Lab7/CMakeLists.txt">

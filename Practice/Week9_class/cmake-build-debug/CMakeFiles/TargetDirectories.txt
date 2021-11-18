@@ -1,0 +1,3 @@
+D:/COMP-2510/Practice/Week9_class/cmake-build-debug/CMakeFiles/Week9_class.dir
+D:/COMP-2510/Practice/Week9_class/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/COMP-2510/Practice/Week9_class/cmake-build-debug/CMakeFiles/rebuild_cache.dir

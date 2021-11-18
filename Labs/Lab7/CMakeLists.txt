@@ -3,4 +3,4 @@ project(Lab7 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Lab7 main.c)
+add_library(Lab7 library.c)
