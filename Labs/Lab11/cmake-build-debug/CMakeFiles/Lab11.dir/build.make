@@ -65,27 +65,27 @@ include CMakeFiles/Lab11.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Lab11.dir/flags.make
 
-CMakeFiles/Lab11.dir/main.c.obj: CMakeFiles/Lab11.dir/flags.make
-CMakeFiles/Lab11.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\COMP-2510\Labs\Lab11\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab11.dir/main.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Lab11.dir\main.c.obj -c D:\COMP-2510\Labs\Lab11\main.c
+CMakeFiles/Lab11.dir/A01256537.c.obj: CMakeFiles/Lab11.dir/flags.make
+CMakeFiles/Lab11.dir/A01256537.c.obj: ../A01256537.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\COMP-2510\Labs\Lab11\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Lab11.dir/A01256537.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Lab11.dir\A01256537.c.obj -c D:\COMP-2510\Labs\Lab11\A01256537.c
 
-CMakeFiles/Lab11.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lab11.dir/main.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\COMP-2510\Labs\Lab11\main.c > CMakeFiles\Lab11.dir\main.c.i
+CMakeFiles/Lab11.dir/A01256537.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Lab11.dir/A01256537.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\COMP-2510\Labs\Lab11\A01256537.c > CMakeFiles\Lab11.dir\A01256537.c.i
 
-CMakeFiles/Lab11.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lab11.dir/main.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\COMP-2510\Labs\Lab11\main.c -o CMakeFiles\Lab11.dir\main.c.s
+CMakeFiles/Lab11.dir/A01256537.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Lab11.dir/A01256537.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\COMP-2510\Labs\Lab11\A01256537.c -o CMakeFiles\Lab11.dir\A01256537.c.s
 
 # Object files for target Lab11
 Lab11_OBJECTS = \
-"CMakeFiles/Lab11.dir/main.c.obj"
+"CMakeFiles/Lab11.dir/A01256537.c.obj"
 
 # External object files for target Lab11
 Lab11_EXTERNAL_OBJECTS =
 
-Lab11.exe: CMakeFiles/Lab11.dir/main.c.obj
+Lab11.exe: CMakeFiles/Lab11.dir/A01256537.c.obj
 Lab11.exe: CMakeFiles/Lab11.dir/build.make
 Lab11.exe: CMakeFiles/Lab11.dir/linklibs.rsp
 Lab11.exe: CMakeFiles/Lab11.dir/objects1.rsp
