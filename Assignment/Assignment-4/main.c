@@ -78,13 +78,13 @@ void swapNextAndBase(Link nodeOne, Link nodeTwo) {
     nodeTwo->next = tempNext;
 }
 
-void compaction(Link *head) {
+void compactMemory(Link *head) {
     if (!*head) {
         return;
     }
     if ((*head)->isHole) {
         Link prevNodeProcess = getPreviousNodeBeforeNextProcess(*head);
-        if (!prevNodeProcess) {
+        if (!prevNodeProcess->isHole) {
             return;
         }
         Link nodeProcess = prevNodeProcess->next;
@@ -92,7 +92,7 @@ void compaction(Link *head) {
         swapNextAndBase(*head, nodeProcess);
         *head = nodeProcess;
     }
-    compaction(&(*head)->next);
+    compactMemory(&(*head)->next);
 }
 
 void printMemory(Link head) {
@@ -136,9 +136,9 @@ int main() {
     mergeFreeBlock(&head);
     printMemory(head);
 
-//    printf("\n----------Compaction of the memory----------\n\n");
-//    compaction(&head);
-//    printMemory(head);
+    printf("\n----------Compaction of the memory----------\n\n");
+    //compactMemory(&head);
+    printMemory(head);
 
     destroy(&head);
     return 0;
