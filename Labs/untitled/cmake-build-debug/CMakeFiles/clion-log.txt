@@ -1,0 +1,31 @@
+C:\Windows\system32\wsl.exe --distribution Ubuntu-20.04 --exec /bin/sh -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/COMP-2510/Labs/untitled/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/d/COMP-2510/Labs/untitled; sleep 0.001"
+CMake Error at /usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake:185 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- The C compiler identification is GNU 9.3.0
+CMake Error at /usr/share/cmake-3.16/Modules/CMakeDetermineCCompiler.cmake:212 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Detecting C compile features
+-- Detecting C compile features - done
+CMake Error at /usr/share/cmake-3.16/Modules/CMakeTestCCompiler.cmake:80 (configure_file):
+  configure_file Problem configuring file
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/d/COMP-2510/Labs/untitled/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/mnt/d/COMP-2510/Labs/untitled/cmake-build-debug/CMakeFiles/CMakeError.log".
+Cannot read D:\COMP-2510\Labs\untitled\cmake-build-debug\CMakeFiles\TargetDirectories.txt
+Cannot read CMake dependency information from 'D:\COMP-2510\Labs\untitled\cmake-build-debug\CMakeFiles\Makefile.cmake'

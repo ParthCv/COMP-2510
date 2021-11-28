@@ -1,3 +1,0 @@
-D:/COMP-2510/Labs/Lab12/cmake-build-debug/CMakeFiles/Lab12.dir
-D:/COMP-2510/Labs/Lab12/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/COMP-2510/Labs/Lab12/cmake-build-debug/CMakeFiles/rebuild_cache.dir
