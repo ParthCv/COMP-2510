@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Quiz5.dir/main.c.o  -o Quiz5 
