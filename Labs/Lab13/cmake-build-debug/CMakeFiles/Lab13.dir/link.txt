@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Lab13.dir/A01256537.c.o  -o Lab13 

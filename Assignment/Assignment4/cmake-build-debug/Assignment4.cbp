@@ -76,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/d/COMP-2510/Assignment/Assignment4/main.c">
+		<Unit filename="/mnt/d/COMP-2510/Assignment/Assignment4/A01256537.c">
 			<Option target="Assignment4"/>
 		</Unit>
 		<Unit filename="/mnt/d/COMP-2510/Assignment/Assignment4/CMakeLists.txt">

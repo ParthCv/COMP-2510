@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/COMP-2510/Assignment/Assignment4
+CMAKE_SOURCE_DIR = /mnt/d/COMP-2510/Labs/Lab13
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/COMP-2510/Assignment/Assignment4/cmake-build-debug
+CMAKE_BINARY_DIR = /mnt/d/COMP-2510/Labs/Lab13/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/COMP-2510/Assignment/Assignment4/cmake-build-debug/CMakeFiles /mnt/d/COMP-2510/Assignment/Assignment4/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/COMP-2510/Labs/Lab13/cmake-build-debug/CMakeFiles /mnt/d/COMP-2510/Labs/Lab13/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/COMP-2510/Assignment/Assignment4/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/COMP-2510/Labs/Lab13/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Assignment4
+# Target rules for targets named Lab13
 
 # Build rule for target.
-Assignment4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Assignment4
-.PHONY : Assignment4
+Lab13: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Lab13
+.PHONY : Lab13
 
 # fast build rule for target.
-Assignment4/fast:
-	$(MAKE) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/build
-.PHONY : Assignment4/fast
+Lab13/fast:
+	$(MAKE) -f CMakeFiles/Lab13.dir/build.make CMakeFiles/Lab13.dir/build
+.PHONY : Lab13/fast
 
 A01256537.o: A01256537.c.o
 
@@ -129,7 +129,7 @@ A01256537.o: A01256537.c.o
 
 # target to build an object file
 A01256537.c.o:
-	$(MAKE) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/A01256537.c.o
+	$(MAKE) -f CMakeFiles/Lab13.dir/build.make CMakeFiles/Lab13.dir/A01256537.c.o
 .PHONY : A01256537.c.o
 
 A01256537.i: A01256537.c.i
@@ -138,7 +138,7 @@ A01256537.i: A01256537.c.i
 
 # target to preprocess a source file
 A01256537.c.i:
-	$(MAKE) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/A01256537.c.i
+	$(MAKE) -f CMakeFiles/Lab13.dir/build.make CMakeFiles/Lab13.dir/A01256537.c.i
 .PHONY : A01256537.c.i
 
 A01256537.s: A01256537.c.s
@@ -147,7 +147,7 @@ A01256537.s: A01256537.c.s
 
 # target to generate assembly for a file
 A01256537.c.s:
-	$(MAKE) -f CMakeFiles/Assignment4.dir/build.make CMakeFiles/Assignment4.dir/A01256537.c.s
+	$(MAKE) -f CMakeFiles/Lab13.dir/build.make CMakeFiles/Lab13.dir/A01256537.c.s
 .PHONY : A01256537.c.s
 
 # Help Target
@@ -156,9 +156,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Assignment4"
+	@echo "... rebuild_cache"
+	@echo "... Lab13"
 	@echo "... A01256537.o"
 	@echo "... A01256537.i"
 	@echo "... A01256537.s"
